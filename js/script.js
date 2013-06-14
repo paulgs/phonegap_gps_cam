@@ -11,7 +11,8 @@ function showGPS() {
         // This is the specific PhoneGap API call
         navigator.geolocation.getCurrentPosition(function(p) {
             // p is the object returned
-            mapPosition(p.coords.latitude, p.coords.longitude)
+            alert("Lat: " + p.coords.latitude+", Lng: " + p.coords.longitude)
+            //mapPosition(p.coords.latitude, p.coords.longitude)
         }, function(error){
             alert("Failed to get GPS location");
         });
